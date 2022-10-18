@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index()
     {
        // $posts = Post::all(); per prenderli tutti
-       $posts = Post::all()->paginate(2);
+       $posts = Post::paginate(2);
 
 
        
