@@ -3,6 +3,7 @@
       <HeaderComponent />
       <HomeComponent />
       
+      
   </div>
 </template>
 

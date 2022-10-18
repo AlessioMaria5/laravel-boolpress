@@ -18,16 +18,16 @@ export default {
         return {
             menu: [
                 {
-                    name: 'Home',
-                    link: '#'
+                    name: 'About',
+                    link: 'about'
                 },
                 {
                     name: 'Blog',
-                    link: '#'
+                    link: 'blog'
                 },
                 {
                     name: 'Contacts',
-                    link: '#'
+                    link: 'contacts'
                 },
             ]
         }

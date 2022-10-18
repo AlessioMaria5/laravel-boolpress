@@ -1,10 +1,14 @@
 <template>
   <div class="main">
+    <div v-for="(post,index) in posts" :key="index" class="card">
+        <h1>{{post.title}}</h1>
+        <p>{{post.content}}</p>
+        <p>{{post.category.title}}</p>
+    </div>
 
-        <div v-for="(posts, index) in posts" :key="index" class="card">
-            <h1>{{posts.title}}</h1>
-            <p>{{posts.content}}</p>
-        </div>
+    <a href="#" @click.prevent="getData(currentPage -1)">Prev</a>
+    <span>{{currentPage}}</span>
+    <a href="#" @click.prevent="getData(currentPage +1)" v-if="currentPage < lastPage">Next</a>
 
   </div>
 </template>
@@ -24,18 +28,25 @@ export default {
     
     },
     mounted() {
-        this.getData();
+        this.getData(2);
     },
     methods: {
 
-        getData(page) {
-            
-            axios.get('/api/posts').then( resolve => {
-
-                this.posts = resolve.data.results
         
+            getData(page){
+                
+                axios.get('/api/posts', {
+                    params: {
+                        page:page
+                    }
+                }).then( resolve => {
+                this.posts = resolve.data.results;
+                this.posts = resolve.data.results.data;
                 this.currentPage = resolve.data.results.current_page;
                 this.lastPage = resolve.data.results.last_page;
+                
+
+                
             }
 
             )
