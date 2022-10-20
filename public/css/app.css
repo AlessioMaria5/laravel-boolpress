@@ -10932,3 +10932,120 @@ a.text-dark:focus {
   }
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.base-nav {
+  background-color: lightslategrey;
+}
+
+.base-nav .nav-wrapper {
+  height: 100vh;
+}
+
+.base-nav .link-list {
+  display: flex;
+  flex-direction: column;
+  background-color: lightslategrey;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.base-nav .link-list .title {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+}
+
+.base-nav .link-list a {
+  padding: 20px;
+  padding-right: 50px;
+  color: white;
+  margin-right: 0px;
+}
+
+.base-nav .link-list a:hover {
+  background-color: rgb(123, 167, 211);
+}
+
+.app-wrapper {
+  display: flex;
+}
+
+.yield-wrapper {
+  width: 100%;
+}
+
+.main-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-control .main-table {
+  margin: 50px;
+  width: 80%;
+  border: 1px solid rgb(189, 189, 189);
+  background-color: white;
+}
+
+.main-control .main-table .control-ul:first-of-type {
+  background-color: rgb(88, 112, 151);
+  height: 50px;
+  color: white;
+}
+
+.main-control .main-table .control-ul .control-list:nth-of-type(1),
+.main-control .main-table .control-ul .control-list:nth-of-type(4),
+.main-control .main-table .control-ul .control-list:nth-of-type(5),
+.main-control .main-table .control-ul .control-list:nth-of-type(6) {
+  text-align: center;
+}
+
+.main-control .main-table .control-ul .control-list:last-of-type,
+.main-control .main-table .control-ul .control-list:nth-of-type(4),
+.main-control .main-table .control-ul .control-list:nth-of-type(5) {
+  width: 50px;
+}
+
+.main-control .main-table .control-ul button {
+  width: 100%;
+  border: none;
+  background-color: #E74C3C;
+  color: white;
+}
+
+.main-control {
+  background-image: url("https://cdn.dribbble.com/users/5763/screenshots/1452021/media/ba412d4df04a7c84d2285f266b3b581b.png");
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 1;
+  background-blend-mode: lighten;
+}
+
+.new_btn {
+  border-radius: 10px;
+  background-color: rgb(123, 167, 211);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 20px;
+  margin-top: 20px;
+  margin-left: 50px;
+  color: white;
+}
+
+.new_btn:hover {
+  color: white;
+  background-color: #E74C3C;
+}
+
+.new_btn:link {
+  font-style: none;
+  font-size: 30px;
+  text-decoration: none;
+}
+

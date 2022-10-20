@@ -2053,7 +2053,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("router-view");
+  return _c("div", [_c("router-view")], 1);
 };
 
 var staticRenderFns = [];
@@ -2093,10 +2093,26 @@ var render = function render() {
         }
       }
     }, [_vm._v(_vm._s(posts.name))])], 1);
-  }), 0)]);
+  }), 0), _vm._v(" "), _vm._m(0)]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "navbar navbar-expand-md navbar-light bg-white shadow-sm"
+  }, [_c("ul", {
+    staticClass: "navbar-nav mr-auto"
+  }, [_c("li", {
+    staticClass: "nav-item active"
+  }, [_c("a", {
+    staticClass: "nav-link",
+    attrs: {
+      href: "http://127.0.0.1:8000/login"
+    }
+  }, [_vm._v("Login")])])])]);
+}];
 render._withStripped = true;
 
 
@@ -2223,7 +2239,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("HeaderComponent"), _vm._v(" "), _c("HomeComponent")], 1);
+  return _c("div", {}, [_c("HeaderComponent"), _vm._v(" "), _c("HomeComponent")], 1);
 };
 
 var staticRenderFns = [];

@@ -5,7 +5,15 @@
                 <router-link class="nav-link" :to="{name: posts.link}">{{posts.name}}</router-link>
             </li>
        </ul>
-       
+
+       <div class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+       <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a href="http://127.0.0.1:8000/login" class="nav-link">Login</a>
+            </li>
+       </ul>
+    
+       </div>
    </div>
 </template>
 

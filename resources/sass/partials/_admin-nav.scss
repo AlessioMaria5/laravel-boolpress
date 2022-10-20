@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.base-nav {
+
+    
+    background-color: lightslategrey;
+
+
+    .nav-wrapper {
+
+        height: 100vh;
+    }
+
+    .link-list {
+
+        display: flex;
+        flex-direction: column;
+        background-color: lightslategrey;
+        width: fit-content;
+        
+
+        .title {
+
+            text-align: center;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: white;
+        }
+        
+        
+
+        a {
+            padding: 20px;
+            padding-right: 50px;
+            color: white;
+            margin-right: 0px;
+
+            &:hover {
+                background-color: rgb(123, 167, 211);
+            }
+        }
+    }
+    
+}
