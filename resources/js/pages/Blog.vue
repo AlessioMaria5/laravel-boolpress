@@ -4,6 +4,7 @@
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
         <p>{{post.category.title}}</p>
+        <router-link :to="{name:'slug', params:{slug:post.slug}} ">Read more...</router-link>
     </div>
 
     <a href="#" @click.prevent="getData(currentPage -1)">Prev</a>
@@ -14,7 +15,7 @@
 </template>
 
 <script>
-import Axios from 'axios';
+import axios from 'axios';
 
 export default {
     name: 'Blog',
@@ -28,7 +29,7 @@ export default {
     
     },
     mounted() {
-        this.getData(2);
+        this.getData(1);
     },
     methods: {
 

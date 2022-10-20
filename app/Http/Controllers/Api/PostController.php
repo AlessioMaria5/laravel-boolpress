@@ -26,4 +26,16 @@ class PostController extends Controller
         ]);
     }
 
+    public function show($slug)
+    {
+       // $posts = Post::all(); per prenderli tutti
+       $posts = Post::where('slug', $slug)->with(['category','tags'])->first();
+
+       return response()->json([
+
+        'success' => true,
+        'results' => $posts
+       ]);
+    }
+
 }
