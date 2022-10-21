@@ -24,21 +24,35 @@
         <nav class="base-nav">
             <div class="nav-wrapper">
 
-                <div class="link-list">
-                    <li class="navbar-brand title">Admin Area</li>
-                <a class="navbar-brand" href="{{ url('/') }}">
+            <div class="link-list">
+                <img src="asset('/storage/images/logoboolean.png')" alt="">
+                <li class="navbar-brand title">Admin Area</li>
+
+                    <a class="navbar-brand " href="{{ url('/') }}">
                 Your Blog
                 </a>
 
-                <a class="navbar-brand" href="{{route('admin.posts.index')}}">
+                <a class="navbar-brand 
+                {{ (request()->is('admin/home')) ? 'active' : '' }}" 
+                href="{{ url('/admin/home') }}">
+                Stats
+                </a>
+
+
+                <a class="navbar-brand
+                {{ (request()->is('admin/posts')) ? 'active' : '' }}"
+                 href="{{route('admin.posts.index')}}">
                 Posts
                 </a>
 
-                <a class="navbar-brand" href="{{route('admin.categories.index')}}">
+                <a class="navbar-brand
+                {{ (request()->is('admin/categories')) ? 'active' : '' }}" href="{{route('admin.categories.index')}}">
                 Categories
                 </a> 
 
-                <a class="navbar-brand" href="{{route('admin.tags.index')}}">
+                <a class="navbar-brand
+                {{ (request()->is('admin/tags')) ? 'active' : '' }}"
+                 href="{{route('admin.tags.index')}}">
                 Tags
                 </a> 
 

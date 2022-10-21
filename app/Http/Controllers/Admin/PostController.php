@@ -20,10 +20,10 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        
-        
+        $categories = Category::all();
+        $tags = Tag::all();
 
-        return view('admin.posts.index',compact('posts'));
+        return view('admin.posts.index',compact('posts','categories','tags'));
     }
 
     /**
@@ -76,6 +76,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        views($post)->record();
+        $totalViews = views($post)->count();
         return view('admin.posts.show', ['post' => $post]);
     }
 
@@ -85,11 +87,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Post $post, Tag $tags)
     {
             $tags = Tag::all();
     
-        return view('admin.posts.edit', compact('post'));
+        return view('admin.posts.edit', compact('post','tags'));
     }
 
     /**

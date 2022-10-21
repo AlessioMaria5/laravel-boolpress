@@ -2128,14 +2128,7 @@ var render = function render() {
         }
       }
     }, [_vm._v(_vm._s(posts.name))])], 1);
-  }), 0), _vm._v(" "), _vm._m(0)]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
+  }), 0), _vm._v(" "), _c("div", {
     staticClass: "navbar navbar-expand-md navbar-light bg-white shadow-sm"
   }, [_c("ul", {
     staticClass: "navbar-nav mr-auto"
@@ -2146,8 +2139,10 @@ var staticRenderFns = [function () {
     attrs: {
       href: "http://127.0.0.1:8000/login"
     }
-  }, [_vm._v("Login")])])])]);
-}];
+  }, [_vm._v(_vm._s("Login"))])])])])]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -2193,12 +2188,18 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "main"
+    staticClass: "blog-main"
   }, [_vm._l(_vm.posts, function (post, index) {
     return _c("div", {
       key: index,
       staticClass: "card"
-    }, [_c("h1", [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(post.content))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(post.category.title))]), _vm._v(" "), _c("router-link", {
+    }, [_c("h1", [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(post.content))]), _vm._v(" "), _c("p", [_vm._v("category: " + _vm._s(post.category.title))]), _vm._v(" "), _c("ul", {
+      staticClass: "tags-for"
+    }, _vm._l(post.tags, function (tag, index) {
+      return _c("li", {
+        key: index
+      }, [_vm._v(_vm._s(tag.title))]);
+    }), 0), _vm._v(" "), _c("router-link", {
       attrs: {
         to: {
           name: "slug",

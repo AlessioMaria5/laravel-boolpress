@@ -22,6 +22,7 @@
         background-color: lightslategrey;
         width: fit-content;
         
+        
 
         .title {
 
@@ -37,11 +38,29 @@
             padding-right: 50px;
             color: white;
             margin-right: 0px;
+            
 
             &:hover {
                 background-color: rgb(123, 167, 211);
             }
         }
+
+        .active {
+            background-color: rgb(123, 167, 211);
+            border-left: 9px solid rgb(255, 255, 255);
+            position: relative;
+
+            &:after {
+                content: ' ► ';
+                position: absolute;
+                top: 25px;
+                right: 10px;
+                font-size: 15px;
+                
+                
+            }
+        }
+        
     }
     
 }

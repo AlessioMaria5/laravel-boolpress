@@ -1,9 +1,13 @@
 <template>
-  <div class="main">
+  <div class="blog-main">
     <div v-for="(post,index) in posts" :key="index" class="card">
         <h1>{{post.title}}</h1>
         <p>{{post.content}}</p>
-        <p>{{post.category.title}}</p>
+        <p>category: {{post.category.title}}</p>
+        <ul class="tags-for">
+            <li v-for="(tag, index) in post.tags" :key="index">{{tag.title}}</li>
+        </ul>
+        <!-- <p>{{$totalViews = views(post).count()}}</p> -->
         <router-link :to="{name:'slug', params:{slug:post.slug}} ">Read more...</router-link>
     </div>
 

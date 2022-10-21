@@ -10971,6 +10971,20 @@ a.text-dark:focus {
   background-color: rgb(123, 167, 211);
 }
 
+.base-nav .link-list .active {
+  background-color: rgb(123, 167, 211);
+  border-left: 9px solid rgb(255, 255, 255);
+  position: relative;
+}
+
+.base-nav .link-list .active:after {
+  content: " \25BA   ";
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  font-size: 15px;
+}
+
 .app-wrapper {
   display: flex;
 }
@@ -11047,5 +11061,131 @@ a.text-dark:focus {
   font-style: none;
   font-size: 30px;
   text-decoration: none;
+}
+
+.crud-form {
+  padding: 20px;
+  border-radius: 20px;
+  height: 50%;
+}
+
+.crud-form h1 {
+  text-align: center;
+}
+
+.crud-form form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  margin-top: 75px;
+  background-color: rgb(207, 216, 229);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 10px 10px 0px 0px rgb(101, 101, 101);
+}
+
+.crud-form form h5,
+.crud-form form label {
+  margin-top: 20px;
+}
+
+.crud-form form textarea,
+.crud-form form input {
+  border: none;
+  padding: 10px 20px;
+  resize: none;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue;
+  margin-top: 2px;
+}
+
+.crud-form form textarea:focus,
+.crud-form form input:focus {
+  border-color: rgb(216, 33, 33);
+}
+
+.crud-form form textarea {
+  min-height: 300px;
+}
+
+.crud-form form .button-wrapper {
+  clear: right;
+}
+
+.crud-form form button {
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  background-color: rgb(126, 163, 216);
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px 20px;
+  float: right;
+  margin-top: 10px;
+}
+
+.crud-form form .tags {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.crud-form form .tags input {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.crud-form form .tags label {
+  line-height: 40px;
+}
+
+.show-wrapper {
+  margin: auto;
+  width: 50%;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.show-wrapper li {
+  list-style: none;
+  padding: 10px;
+  color: white;
+  background-color: rgb(126, 163, 216);
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.show-wrapper li:hover {
+  background-color: rgb(101, 101, 101);
+}
+
+.blog-main {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+}
+
+.blog-main .card {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.blog-main .card .tags-for {
+  display: flex;
+  gap: 20px;
+}
+
+.blog-main .card .tags-for li {
+  list-style: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(168, 190, 222);
 }
 

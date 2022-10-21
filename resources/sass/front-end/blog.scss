@@ -1,0 +1,29 @@
+.blog-main {
+
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+
+    .card {
+
+        padding: 20px;
+        margin-top: 10px;
+
+        .tags-for {
+
+            display: flex;
+            gap: 20px;
+
+            li {
+
+                list-style: none;
+                padding: 5px 10px;
+                border-radius: 10px;
+                background-color: rgb(168, 190, 222)
+
+            }
+        }
+    }
+    
+}

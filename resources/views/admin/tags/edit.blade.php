@@ -1,7 +1,8 @@
 @extends ('layouts.app')
 
 @section ('content')
-
+<div class="crud-form">
+    <h1>Edit Tag</h1>
 <form action="{{route('admin.tags.update', compact('tag'))}}" method="POST">
     @csrf
 
@@ -10,8 +11,13 @@
     <label for="title">Tags</label>
     <input type="text" id="title" name='title'>
     
-    <button type="submit">Complete Edit</button>
+    <div class="button-wrapper">
+        <button type="submit">Edit Tag</button>
+    </div>
+    
 </form>
+
+</div>
 
 
 @endsection
